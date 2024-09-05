@@ -1,6 +1,6 @@
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, {useState} from "react";
+import React, { useState, useEffect, useRef } from 'react';
 import NavBar from "./NavBar";
 import "./TrainBookingChatbot.css";
 
@@ -8,6 +8,7 @@ export const TrainBookingChatbot = () => {
 
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
+  const endOfMessagesRef = useRef(null);
 
   const handleSendMessage = async (e) => {
     e.preventDefault();
@@ -17,7 +18,7 @@ export const TrainBookingChatbot = () => {
     // Add user message to the chat
     const userMessage = { text: input, sender: 'You' };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
-
+    setInput('');
     // Send user message to the Java server
     try {
       const response = await fetch('http://localhost:8080/api/chat', {
@@ -37,12 +38,16 @@ export const TrainBookingChatbot = () => {
       setMessages((prevMessages) => [...prevMessages, botMessage]);
     } catch (error) {
       console.error('Error:', error);
-      const errorMessage = { text: 'Error communicating with server.', sender: 'Bot' };
+      const errorMessage = {text: 'Error communicating with server.', sender: 'Bot'};
       setMessages((prevMessages) => [...prevMessages, errorMessage]);
     }
-    setInput('');
-
   };
+
+  useEffect(() => {
+    if (endOfMessagesRef.current) {
+      endOfMessagesRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages]);
 
   return (
     <div className="container mx-auto mt-0 mb-0 bg-slate-800 flex flex-col h-screen">
@@ -58,6 +63,7 @@ export const TrainBookingChatbot = () => {
                 {msg.sender}: {msg.text}
               </div>
           ))}
+          <div ref={endOfMessagesRef}/>
         </div>
 
         <form onSubmit={handleSendMessage} className="flex items-center mb-7">
