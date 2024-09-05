@@ -49,7 +49,7 @@ export const TrainBookingChatbot = () => {
 
       <NavBar />
 
-      {/*<h1 className="text-3xl text-white font-bold ml-7 mb-7 mt-7">AI Powered - Train Booking Chatbot</h1> */}
+      <h1 className="text-3xl text-white font-bold ml-7 mb-7 mt-7">AI Powered - Ticket Booking Chatbot</h1>
 
       <div className="chat-container rounded-lg shadow-xl p-2 flex flex-col flex-grow min-h-2.5">
         <div className="chat-messages flex-grow overflow-y-auto rounded-xl mb-3 bg-slate-700 p-10 text-2xl">
@@ -60,8 +60,7 @@ export const TrainBookingChatbot = () => {
           ))}
         </div>
 
-        <form onSubmit={handleSendMessage} className="flex items-center">
-          {/* onSubmit={handleSubmit}  */}
+        <form onSubmit={handleSendMessage} className="flex items-center mb-7">
           <input
             type="text"  value={input}
             onChange={(e) => setInput(e.target.value)}
