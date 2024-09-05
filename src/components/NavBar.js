@@ -2,7 +2,7 @@ import React from "react";
 
 export const NavBar = () => {
   return (
-    <nav className="bg-white border-gray-200 rounded-xl m-2 dark:bg-gray-900">
+    <nav className="bg-white border-gray-200 rounded-xl m-2 dark:bg-gray-900 relative">
       <div className="max-w-screen-2xl h-auto flex flex-wrap items-center justify-between mx-auto p-3">
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
