@@ -1,4 +1,5 @@
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect, useRef } from 'react';
 import NavBar from "./NavBar";
@@ -50,7 +51,7 @@ export const TrainBookingChatbot = () => {
   }, [messages]);
 
   return (
-    <div className="container mx-auto mt-0 mb-0 bg-slate-800 flex flex-col h-screen">
+    <div className="container mx-auto mt-0 mb-0 bg-slate-800 flex flex-col h-screen overscroll-y-none">
 
       <NavBar />
 
@@ -74,10 +75,10 @@ export const TrainBookingChatbot = () => {
             placeholder="Book your ticket..."
           />
           <button
-            type="submit"
-            className="px-8 py-6 ml-4 rounded-full bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            <FontAwesomeIcon icon={faPaperPlane} />
+              type="submit"
+              className="px-7 py-5 ml-2  ">
+            <FontAwesomeIcon icon={ faArrowUp } size={"2x"} color={"#fff"}/>
+            {/*<FontAwesomeIcon icon={faPaperPlane}/>*/}
           </button>
         </form>
       </div>
@@ -85,3 +86,5 @@ export const TrainBookingChatbot = () => {
   );
 };
 export default TrainBookingChatbot;
+
+// rounded-full bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500
