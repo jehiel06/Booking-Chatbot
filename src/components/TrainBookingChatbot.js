@@ -71,7 +71,7 @@ export const TrainBookingChatbot = () => {
             type="text"  value={input}
             onChange={(e) => setInput(e.target.value)}
             className="flex-grow px-4 py-2 min-h-16 text-xl rounded-full border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Book your train..."
+            placeholder="Book your ticket..."
           />
           <button
             type="submit"
