@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Booking-Chatbot/static/css/main.4ff1676b.css",
-    "main.js": "/Booking-Chatbot/static/js/main.e98c7497.js",
+    "main.css": "/Booking-Chatbot/static/css/main.ea36d64a.css",
+    "main.js": "/Booking-Chatbot/static/js/main.f99eb02a.js",
     "static/js/453.419a5d54.chunk.js": "/Booking-Chatbot/static/js/453.419a5d54.chunk.js",
     "index.html": "/Booking-Chatbot/index.html",
-    "main.4ff1676b.css.map": "/Booking-Chatbot/static/css/main.4ff1676b.css.map",
-    "main.e98c7497.js.map": "/Booking-Chatbot/static/js/main.e98c7497.js.map",
+    "main.ea36d64a.css.map": "/Booking-Chatbot/static/css/main.ea36d64a.css.map",
+    "main.f99eb02a.js.map": "/Booking-Chatbot/static/js/main.f99eb02a.js.map",
     "453.419a5d54.chunk.js.map": "/Booking-Chatbot/static/js/453.419a5d54.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ff1676b.css",
-    "static/js/main.e98c7497.js"
+    "static/css/main.ea36d64a.css",
+    "static/js/main.f99eb02a.js"
   ]
 }
